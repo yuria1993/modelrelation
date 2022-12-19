@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthorController;
-use App\Http\Controllers\BookControler;
+use App\Http\Controllers\BookController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +15,10 @@ use App\Http\Controllers\BookControler;
 |
 */
 
+
 Route::prefix('book')->group(function () {
-    Route::get('/',[BookController::class,'index']);
-    Route::get('/add',[BookController::class,'add']);
-    Route::post('add',[BookController::class,'create']);
-   
+    Route::get('/', [BookController::class, 'index']);
+    Route::get('/add', [BookController::class, 'add']);
+    Route::post('/add', [BookController::class, 'create']);
 });
+   
