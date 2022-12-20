@@ -12,4 +12,10 @@ class AuthorCOntroller extends Controller
         $authors = Author::all();
         return view('author.index',['authors' => $authors]);
     }
+
+    public function relate(Request $request)
+    {
+        $authors = Author::all();
+        return view('author.index',['authors' => $authors]);
+    }
 }
